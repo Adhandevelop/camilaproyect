@@ -1,0 +1,845 @@
+﻿<!DOCTYPE html>
+<html class="scroll-smooth" lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>NOVA PHARMA - Innovación Farmacéutica y Excelencia Científica</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+  <link rel="icon" type="image/png" href="assets/favicon.png"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@500;600;700;800&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-secondary-fixed": "#241827",
+            "secondary-fixed-dim": "#e9b8d1",
+            "primary-fixed": "#e6d4ee",
+            "surface-container-lowest": "#ffffff",
+            "on-surface-variant": "#5a4a5e",
+            "secondary-fixed": "#ffd7ea",
+            "primary-fixed-dim": "#c9aed6",
+            "on-tertiary-fixed-variant": "#58375c",
+            "tertiary": "#8b5e8e",
+            "outline": "#7d6d82",
+            "on-background": "#241827",
+            "surface": "#faf8fb",
+            "tertiary-container": "#c9aed6",
+            "on-tertiary-container": "#241827",
+            "on-secondary": "#ffffff",
+            "error-container": "#ffdad6",
+            "on-primary": "#ffffff",
+            "surface-container-low": "#f5eff8",
+            "error": "#ba1a1a",
+            "tertiary-fixed": "#ffd7ea",
+            "surface-variant": "#ebdced",
+            "surface-container": "#efe6f3",
+            "inverse-on-surface": "#faf8fb",
+            "outline-variant": "#e2d6e6",
+            "surface-tint": "#6e4872",
+            "on-primary-container": "#ffffff",
+            "on-secondary-container": "#241827",
+            "inverse-surface": "#2d1f30",
+            "inverse-primary": "#c9aed6",
+            "background": "#faf8fb",
+            "on-primary-fixed": "#241827",
+            "secondary-container": "#c9aed6",
+            "primary": "#6e4872",
+            "on-surface": "#241827",
+            "surface-dim": "#e6d9ec",
+            "tertiary-fixed-dim": "#f4bdd8",
+            "primary-container": "#58375c",
+            "on-error": "#ffffff",
+            "on-tertiary": "#ffffff",
+            "on-error-container": "#93000a",
+            "surface-container-highest": "#e6d9ec",
+            "secondary": "#8b5e8e",
+            "on-secondary-fixed-variant": "#58375c",
+            "on-primary-fixed-variant": "#58375c",
+            "on-tertiary-fixed": "#241827",
+            "surface-container-high": "#efe6f3",
+            "surface-bright": "#ffffff"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "fontFamily": {
+            "headline-lg": ["Plus Jakarta Sans"],
+            "label-lg": ["Inter"],
+            "headline-md": ["Plus Jakarta Sans"],
+            "label-md": ["Inter"],
+            "body-lg": ["Inter"],
+            "headline-xl-mobile": ["Plus Jakarta Sans"],
+            "headline-xl": ["Plus Jakarta Sans"],
+            "body-md": ["Inter"],
+            "headline-sm": ["Plus Jakarta Sans"],
+            "label-sm": ["Inter"],
+            "headline-lg-mobile": ["Plus Jakarta Sans"],
+            "body-sm": ["Inter"],
+            "mono": ["JetBrains Mono", "monospace"]
+          },
+          "fontSize": {
+            "headline-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+            "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+            "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" }],
+            "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" }],
+            "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+            "headline-xl-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "headline-xl": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.025em", "fontWeight": "700" }],
+            "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600" }],
+            "headline-lg-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.015em", "fontWeight": "600" }],
+            "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }]
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .clinical-card-shadow {
+      box-shadow: 0 1px 3px 0 rgba(2, 132, 199, 0.04), 0 1px 2px -1px rgba(15, 23, 42, 0.03);
+    }
+    .clinical-card-hover:hover {
+      box-shadow: 0 10px 25px -5px rgba(2, 132, 199, 0.08), 0 8px 10px -6px rgba(15, 23, 42, 0.02);
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md antialiased selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+
+<!-- TOP APP BAR -->
+<header class="sticky top-0 w-full z-50 bg-surface-container-lowest/90 backdrop-blur-md border-b border-outline-variant/30 shadow-sm transition-all duration-200">
+  <div class="flex justify-between items-center w-full max-w-7xl mx-auto px-6 lg:px-12 h-20">
+    <!-- Brand Logo Anchor -->
+    <a class="flex items-center gap-3 transition-all duration-200 active:scale-[0.98]" href="#inicio">
+      <img alt="NOVA PHARMA Logo" class="h-10 w-auto object-contain" src="assets/logo.png"/>
+      <span class="font-headline-sm font-bold text-primary tracking-tight hidden sm:inline">NOVA PHARMA</span>
+    </a>
+    <!-- Desktop Nav Links -->
+    <nav class="hidden md:flex items-center gap-7">
+      <a class="text-primary font-semibold border-b-2 border-primary pb-1 font-label-lg text-label-lg transition-colors" href="#inicio">Inicio</a>
+      <a class="text-on-surface-variant hover:text-primary font-normal font-label-lg text-label-lg transition-colors" href="#productos">Productos</a>
+      <a class="text-on-surface-variant hover:text-primary font-normal font-label-lg text-label-lg transition-colors" href="#nosotros">Nosotros</a>
+      <a class="text-on-surface-variant hover:text-primary font-normal font-label-lg text-label-lg transition-colors" href="#farmacologia-etica">Galénica y Ética</a>
+      <a class="text-on-surface-variant hover:text-primary font-normal font-label-lg text-label-lg transition-colors" href="#ciencia">I+D y Ciencia</a>
+    </nav>
+    <!-- Trailing Cluster -->
+    <div class="flex items-center gap-4">
+      <button class="flex items-center gap-1.5 px-3 py-1.5 text-on-surface-variant hover:text-primary font-label-md text-label-md rounded transition-colors" title="Idioma del portal">
+        <span class="material-symbols-outlined text-[18px]">language</span>
+        <span class="font-medium">ES</span>
+      </button>
+      <button onclick="openModal('modal-login')" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-surface-container-low text-primary border border-outline-variant/40 hover:bg-surface-container hover:text-primary-container font-label-lg text-label-lg transition-all duration-150 active:scale-[0.98]">
+        <span class="material-symbols-outlined text-[18px]">lock</span>
+        <span>Portal Médico</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+<!-- HERO SECTION -->
+<section class="relative pt-12 pb-20 lg:pt-20 lg:pb-28 overflow-hidden bg-gradient-to-b from-surface-container-lowest via-surface to-surface" id="inicio">
+  <div class="absolute inset-0 opacity-[0.04] pointer-events-none" style="background-image: radial-gradient(#6e4872 1px, transparent 1px); background-size: 24px 24px;"></div>
+  <div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+      <!-- Left Column Content -->
+      <div class="lg:col-span-7 flex flex-col items-start gap-6">
+        <div class="flex flex-wrap items-center gap-2">
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-low border border-outline-variant/40 text-primary font-label-sm text-label-sm">
+            <span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+            Biofarmacéutica Global de Innovación
+          </span>
+          <span class="inline-flex items-center px-2.5 py-1 rounded-full bg-surface-container-lowest border border-outline-variant/30 text-outline font-label-sm text-label-sm">
+            ISO 13485 &amp; cGMP
+          </span>
+        </div>
+        <h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight max-w-2xl">
+          Innovación farmacéutica para un <span class="text-primary">futuro más saludable</span>
+        </h1>
+        <p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+          En NOVA PHARMA investigamos, formulamos y producimos moléculas propias bajo los más altos estándares de farmacocinética clínica, bioequivalencia y bioética médica.
+        </p>
+        <div class="flex flex-wrap items-center gap-4 pt-2 w-full sm:w-auto">
+          <a class="w-full sm:w-auto text-center px-6 py-3.5 rounded-lg bg-primary text-on-primary font-label-lg text-label-lg shadow-sm hover:bg-primary-container transition-all duration-150 active:scale-[0.98]" href="#productos">
+            Explorar medicamentos
+          </a>
+          <a class="w-full sm:w-auto text-center px-6 py-3.5 rounded-lg bg-surface-container-lowest text-primary border border-outline-variant/40 hover:bg-surface-container-low font-label-lg text-label-lg transition-all duration-150 active:scale-[0.98]" href="#nosotros">
+            Conoce nuestra empresa
+          </a>
+        </div>
+        <!-- Clinical Confidence Badges -->
+        <div class="w-full pt-8 mt-2 border-t border-outline-variant/20 grid grid-cols-3 gap-4">
+          <div class="flex flex-col">
+            <div class="flex items-center gap-1.5 text-primary font-headline-sm text-headline-sm">
+              <span class="material-symbols-outlined text-[20px]">verified</span>
+              <span>FDA &amp; EMA</span>
+            </div>
+            <span class="text-on-surface-variant font-label-sm text-label-sm mt-0.5">Aprobaciones regulatorias</span>
+          </div>
+          <div class="flex flex-col">
+            <div class="flex items-center gap-1.5 text-primary font-headline-sm text-headline-sm">
+              <span class="material-symbols-outlined text-[20px]">science</span>
+              <span>cGMP</span>
+            </div>
+            <span class="text-on-surface-variant font-label-sm text-label-sm mt-0.5">Estándares analíticos</span>
+          </div>
+          <div class="flex flex-col">
+            <div class="flex items-center gap-1.5 text-primary font-headline-sm text-headline-sm">
+              <span class="material-symbols-outlined text-[20px]">public</span>
+              <span>+40 Países</span>
+            </div>
+            <span class="text-on-surface-variant font-label-sm text-label-sm mt-0.5">Presencia asistencial</span>
+          </div>
+        </div>
+      </div>
+      <!-- Right Column Visual Card -->
+      <div class="lg:col-span-5 relative">
+        <div class="relative rounded-2xl p-2 bg-surface-container-lowest border border-outline-variant/40 shadow-xl overflow-hidden group">
+          <img alt="Laboratorio de Investigación NOVA PHARMA" class="rounded-xl w-full h-[440px] object-cover transition-transform duration-700 group-hover:scale-[1.02]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAG5Dk3DlL890L0zSVAuGHtp-CEV9WH4jiamxexaB4SdH1zGAwXXOLNuRzZP5ruJmgGc-7E6RzoYKHRtOWoiWl6Q9rkuX8b1jR38bJbHWDkJDZHFOH6JVDzWuhKqhH377I8HjPlIk56YBpkOboamFHxLi9jqY18iENFOfPJKjEtcoD-SmCi9cHq1n-fcMtJWS-d0cNdhUwSl8JfvYrng9U5EdfKS7YkkpP46UG2zL-z"/>
+          <div class="absolute bottom-6 left-6 right-6 p-4 rounded-xl bg-surface-container-lowest/95 backdrop-blur-md border border-outline-variant/30 shadow-lg flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-primary border border-outline-variant/20">
+                <span class="material-symbols-outlined text-[22px]">chips</span>
+              </div>
+              <div>
+                <div class="font-headline-sm text-headline-sm text-on-surface font-bold">98.4%</div>
+                <div class="font-label-sm text-label-sm text-on-surface-variant">Pureza Molecular Garantizada</div>
+              </div>
+            </div>
+            <span class="px-2.5 py-1 rounded bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">
+              ICH Q3A
+            </span>
+          </div>
+        </div>
+        <div class="absolute -top-12 -right-12 w-64 h-64 bg-primary-fixed/30 rounded-full blur-3xl -z-10 pointer-events-none"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION: CATÁLOGO DE MEDICAMENTOS -->
+<section class="py-20 bg-surface-container-lowest border-y border-outline-variant/30" id="productos">
+  <div class="max-w-7xl mx-auto px-6 lg:px-12">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+      <div class="max-w-2xl">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-low border border-outline-variant/30 text-primary font-label-sm text-label-sm mb-3">
+          <span class="material-symbols-outlined text-[16px]">medication</span>
+          <span>Portafolio Terapéutico Oficial</span>
+        </div>
+        <h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+          Portafolio Terapéutico y Medicamentos
+        </h2>
+        <p class="font-body-md text-body-md text-on-surface-variant mt-2">
+          Nuestras 4 líneas terapéuticas desarrolladas bajo protocolos de bioequivalencia y certificación internacional. Haz clic en cualquier medicamento para consultar su ficha farmacocinética (ADME), farmacodinamia, posología y formas farmacéuticas.
+        </p>
+      </div>
+      <div class="flex items-center gap-2 self-start md:self-end">
+        <span class="font-label-md text-label-md text-outline">Uso clínico:</span>
+        <span class="px-3 py-1 bg-surface-container-low text-primary rounded-lg font-label-md text-label-md border border-outline-variant/20">Hospitalario y Ambulatorio</span>
+      </div>
+    </div>
+
+    <!-- 4-Card Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <!-- Card 1: Antihipertensivo -->
+      <article class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 clinical-card-shadow clinical-card-hover flex flex-col h-full transition-all duration-200">
+        <div class="p-3 pb-0">
+          <div class="overflow-hidden rounded-lg bg-surface-container-low relative">
+            <img alt="Cardio-Care Telmisartán" class="h-48 w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBofMW6vwQ6l3Qwj_0WhVyDSfroD5eE3y0GHZuVwb-W2g5987oSZ8eb36tIdgv23sfbBeJJ9bLOGElREZIhX3N1nU0b6bkJUV7zdxv-r-qpjLntdSne-5AdCaEE4xOg5PoHUWokbfiwyK4bltIR6NrEJauarzAey1E2LtSOwnQPjh2REQ4t1-GsSE1foZ9kbmlj-rmz1XFEs_mILxUP7eY1cWrqOUEOUHL8-uHbhCpg"/>
+            <span class="absolute top-2.5 left-2.5 px-2.5 py-0.5 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm border border-outline-variant/30 font-label-sm text-label-sm text-primary font-medium">
+              Cardiología
+            </span>
+          </div>
+        </div>
+        <div class="p-5 flex flex-col flex-1 justify-between gap-4">
+          <div>
+            <span class="font-label-sm text-label-sm text-outline tracking-wider block">ANTIHIPERTENSIVO (ARA-II)</span>
+            <h3 class="font-headline-sm text-headline-sm text-on-surface mt-1">Telmisartán (Cardio-Care®)</h3>
+            <div class="mt-3 py-2 px-2.5 rounded bg-surface-container-low border border-outline-variant/20">
+              <div class="font-label-sm text-label-sm text-on-surface-variant font-medium">Formas farmacéuticas:</div>
+              <div class="font-body-sm text-body-sm text-outline mt-0.5">Comprimidos 40 mg / 80 mg; Comprimidos recubiertos combinados</div>
+            </div>
+            <p class="font-body-sm text-body-sm text-on-surface-variant mt-3">
+              Antagonista selectivo de los receptores AT₁ de angiotensina II para el control sostenido de la presión arterial durante 24 horas.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-outline-variant/20">
+            <a href="cardio-care.html" class="w-full flex items-center justify-between text-left px-3 py-2 rounded-lg bg-surface hover:bg-surface-container-low text-primary font-label-md text-label-md transition-colors border border-outline-variant/20 font-semibold">
+              <span>Ver ficha farmacológica</span>
+              <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 2: Antibiótico -->
+      <article class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 clinical-card-shadow clinical-card-hover flex flex-col h-full transition-all duration-200">
+        <div class="p-3 pb-0">
+          <div class="overflow-hidden rounded-lg bg-surface-container-low relative">
+            <img alt="Amoxicilina Clavulanato" class="h-48 w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzNPdT9rN1kybG4mdVywBv-XPBrVRKWAfISHl87YxWXsWmZbDTF0qhOBchLRmlSLE-FL19qphqG8sXGFqLcpuLcjHt7E_KZylCLp7YN7sfOiKMZp9hYiu_mz3eR1vIwVNMTLKHKLTGJyVLP-b3GYM0Ad3yhsup91Yuapbf-PZFcBboMmYykT6GGaPcAm5pS850QTYDweC2tWsdROQoqCzCyH8vT8GsFctu8s20hwov"/>
+            <span class="absolute top-2.5 left-2.5 px-2.5 py-0.5 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm border border-outline-variant/30 font-label-sm text-label-sm text-primary font-medium">
+              Infectología
+            </span>
+          </div>
+        </div>
+        <div class="p-5 flex flex-col flex-1 justify-between gap-4">
+          <div>
+            <span class="font-label-sm text-label-sm text-outline tracking-wider block">ANTIBIÓTICO BACTERICIDA</span>
+            <h3 class="font-headline-sm text-headline-sm text-on-surface mt-1">Amoxicilina + Clavulánico (NovaCilin®)</h3>
+            <div class="mt-3 py-2 px-2.5 rounded bg-surface-container-low border border-outline-variant/20">
+              <div class="font-label-sm text-label-sm text-on-surface-variant font-medium">Formas farmacéuticas:</div>
+              <div class="font-body-sm text-body-sm text-outline mt-0.5">Polvo suspensión oral 400/57 mg; Perfusión IV 1000/200 mg</div>
+            </div>
+            <p class="font-body-sm text-body-sm text-on-surface-variant mt-3">
+              Antibiótico betalactámico de amplio espectro potenciado con inhibidor de betalactamasas para infecciones respiratorias y sistémicas.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-outline-variant/20">
+            <a href="novacilin.html" class="w-full flex items-center justify-between text-left px-3 py-2 rounded-lg bg-surface hover:bg-surface-container-low text-primary font-label-md text-label-md transition-colors border border-outline-variant/20 font-semibold">
+              <span>Ver ficha farmacológica</span>
+              <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 3: Analgésico / Antiinflamatorio -->
+      <article class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 clinical-card-shadow clinical-card-hover flex flex-col h-full transition-all duration-200">
+        <div class="p-3 pb-0">
+          <div class="overflow-hidden rounded-lg bg-surface-container-low relative">
+            <img alt="Dexketoprofeno Dolor-Off" class="h-48 w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB37SCag3Z-nCfzoJLhbDN1m94GA5IF6XXnzLdKQhmEKXWQJ8T7j-ujzbIqiRCCsvTUhjxTI7E1c_GaiwFk1_CNiCcdpSsZySsuo2bn6NXUVlYrqfa9Avt4m4EnHKQz88Xa1zvIgTVocGT5soK6fhwh_Zal9qX2Lh50J2IaF_Ljfk5ILHsNui_apxBA6CFANTEh9IoOaRn4mFAURhn0dFZYjRpM_wWW4vw9zeS_MQmy"/>
+            <span class="absolute top-2.5 left-2.5 px-2.5 py-0.5 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm border border-outline-variant/30 font-label-sm text-label-sm text-primary font-medium">
+              Analgesia y Dolor
+            </span>
+          </div>
+        </div>
+        <div class="p-5 flex flex-col flex-1 justify-between gap-4">
+          <div>
+            <span class="font-label-sm text-label-sm text-outline tracking-wider block">ANTIINFLAMATORIO AINE</span>
+            <h3 class="font-headline-sm text-headline-sm text-on-surface mt-1">Dexketoprofeno (Dolor-Off®)</h3>
+            <div class="mt-3 py-2 px-2.5 rounded bg-surface-container-low border border-outline-variant/20">
+              <div class="font-label-sm text-label-sm text-on-surface-variant font-medium">Formas farmacéuticas:</div>
+              <div class="font-body-sm text-body-sm text-outline mt-0.5">Solución inyectable IM/IV 50 mg; Comprimidos recubiertos 25 mg</div>
+            </div>
+            <p class="font-body-sm text-body-sm text-on-surface-variant mt-3">
+              AINE enantiomérico puro S(+) de acción ultrarrápida para el alivio agudo del dolor moderado a severo y dolor postoperatorio.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-outline-variant/20">
+            <a href="dolor-off.html" class="w-full flex items-center justify-between text-left px-3 py-2 rounded-lg bg-surface hover:bg-surface-container-low text-primary font-label-md text-label-md transition-colors border border-outline-variant/20 font-semibold">
+              <span>Ver ficha farmacológica</span>
+              <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 4: Antiviral Reciente Aprobación FDA -->
+      <article class="bg-surface-container-lowest rounded-xl border border-secondary-container/40 clinical-card-shadow clinical-card-hover flex flex-col h-full transition-all duration-200 relative overflow-hidden">
+        <div class="absolute top-0 right-0 bg-primary text-on-primary font-label-sm text-[10px] tracking-wider uppercase font-bold py-1 px-3 rounded-bl-lg z-10 shadow-sm">
+          Aprobación FDA (Últimos 3 años)
+        </div>
+        <div class="p-3 pb-0">
+          <div class="overflow-hidden rounded-lg bg-surface-container-low relative">
+            <img alt="Lenacapavir Inyectable" class="h-48 w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAr42i8bHmdFLdm8dT8Rbeq0kx4wlqsQAVoop95UCwSKUWCkJwUqy3g1BtGUOcG0r_h1mr_w1AyK2pOB4q6bCED8Xc0TNcC44KDtpkywuxrqgJlYnH_wgILVe4cTYp8DHjaChpMjej1rPxfu7h_9SWg5p-TSYiVLA8innfJK3NkzY9IrW6uiCLVi_PQeMC1rNuYOnT1qT1ufxT8ikD3lVSNR9oLn2BU6sa84KSm5jrW"/>
+            <span class="absolute top-2.5 left-2.5 px-2.5 py-0.5 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm border border-outline-variant/30 font-label-sm text-label-sm text-primary font-medium">
+              Antirretroviral First-in-Class
+            </span>
+          </div>
+        </div>
+        <div class="p-5 flex flex-col flex-1 justify-between gap-4">
+          <div>
+            <span class="font-label-sm text-label-sm text-primary font-semibold tracking-wider block">INNOVACIÓN BIOMÉDICA</span>
+            <h3 class="font-headline-sm text-headline-sm text-on-surface mt-1">Lenacapavir (Leni-Bio®)</h3>
+            <div class="mt-3 py-2 px-2.5 rounded bg-surface-container-low border border-secondary-container/30">
+              <div class="font-label-sm text-label-sm text-primary font-medium">Formas farmacéuticas:</div>
+              <div class="font-body-sm text-body-sm text-outline mt-0.5">Inyectable SC 463.5 mg/1.5 mL; Comprimidos recubiertos 300 mg</div>
+            </div>
+            <p class="font-body-sm text-body-sm text-on-surface-variant mt-3">
+              Inhibidor de la cápside viral del VIH-1 de acción ultra-prolongada con pauta semestral. Aprobado por la FDA para VIH multirresistente y PrEP.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-outline-variant/20">
+            <a href="leni-bio.html" class="w-full flex items-center justify-between text-left px-3 py-2 rounded-lg bg-primary-fixed/40 hover:bg-primary-fixed text-primary font-label-md text-label-md transition-colors border border-primary-fixed font-semibold">
+              <span>Ficha farmacológica completa</span>
+              <span class="material-symbols-outlined text-[18px]">verified</span>
+            </a>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <!-- Banner Regulatorio de Portafolio -->
+    <div class="mt-12 p-6 rounded-xl bg-surface border border-outline-variant/30 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-4">
+        <div class="w-12 h-12 rounded-xl bg-surface-container-lowest border border-outline-variant/30 flex items-center justify-center text-primary shadow-sm shrink-0">
+          <span class="material-symbols-outlined text-[24px]">verified_user</span>
+        </div>
+        <div>
+          <div class="font-headline-sm text-headline-sm text-on-surface">Validación de Lote y Bioequivalencia</div>
+          <div class="font-body-sm text-body-sm text-on-surface-variant">Consulte los certificados de análisis (CoA) y estudios de bioequivalencia de nuestras 4 moléculas.</div>
+        </div>
+      </div>
+      <button onclick="openModal('modal-coa')" class="shrink-0 px-5 py-2.5 rounded-lg bg-surface-container-lowest border border-outline-variant/40 text-primary hover:bg-surface-container-low font-label-lg text-label-lg transition-colors">
+        Acceso a Certificados (CoA)
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION: NOSOTROS / MISIÓN, VISIÓN Y ORGANIGRAMA -->
+<section class="py-20 bg-surface" id="nosotros">
+  <div class="max-w-7xl mx-auto px-6 lg:px-12">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-low border border-outline-variant/30 text-primary font-label-sm text-label-sm mb-3">
+        <span class="material-symbols-outlined text-[16px]">corporate_fare</span>
+        <span>Identidad Corporativa</span>
+      </span>
+      <h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+        Liderazgo en Investigación y Excelencia Farmacéutica
+      </h2>
+      <p class="font-body-md text-body-md text-on-surface-variant mt-3">
+        NOVA PHARMA S.A. integra investigación traslacional, desarrollo galénico y farmacovigilancia continua bajo un gobierno corporativo guiado por la bioética.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6">
+      <!-- Card Misión -->
+      <div class="lg:col-span-6 bg-surface-container-lowest p-8 rounded-2xl border border-outline-variant/30 clinical-card-shadow clinical-card-hover flex flex-col justify-between">
+        <div>
+          <div class="w-12 h-12 rounded-xl bg-surface-container-low text-primary flex items-center justify-center mb-6">
+            <span class="material-symbols-outlined text-[24px]">flag</span>
+          </div>
+          <h3 class="font-headline-sm text-headline-sm text-on-surface mb-3">Nuestra Misión</h3>
+          <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Desarrollar, producir y distribuir medicamentos esenciales y terapias de última generación bajo los más estrictos estándares de biodisponibilidad, eficacia clínica y seguridad, garantizando accesibilidad equitativa para los sistemas de salud.
+          </p>
+        </div>
+        <div class="mt-8 pt-4 border-t border-outline-variant/20 flex items-center gap-2 text-primary font-label-sm text-label-sm">
+          <span class="material-symbols-outlined text-[18px]">health_and_safety</span>
+          <span>Compromiso con el bienestar integral del paciente</span>
+        </div>
+      </div>
+
+      <!-- Card Visión -->
+      <div class="lg:col-span-6 bg-surface-container-lowest p-8 rounded-2xl border border-outline-variant/30 clinical-card-shadow clinical-card-hover flex flex-col justify-between">
+        <div>
+          <div class="w-12 h-12 rounded-xl bg-surface-container-low text-primary flex items-center justify-center mb-6">
+            <span class="material-symbols-outlined text-[24px]">visibility</span>
+          </div>
+          <h3 class="font-headline-sm text-headline-sm text-on-surface mb-3">Nuestra Visión 2030</h3>
+          <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Posicionarnos como la empresa biofarmacéutica de referencia en medicina de precisión, formulaciones de liberación controlada y terapias innovadoras sostenibles que transformen el pronóstico de enfermedades cardiovasculares, infecciosas y agudas.
+          </p>
+        </div>
+        <div class="mt-8 pt-4 border-t border-outline-variant/20 flex items-center gap-2 text-primary font-label-sm text-label-sm">
+          <span class="material-symbols-outlined text-[18px]">trending_up</span>
+          <span>Innovación biofarmacéutica continua</span>
+        </div>
+      </div>
+
+      <!-- Organigrama Visual Corporativo -->
+      <div class="lg:col-span-12 bg-surface-container-lowest p-8 rounded-2xl border border-outline-variant/30 clinical-card-shadow">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 rounded-xl bg-surface-container-low text-primary flex items-center justify-center shrink-0">
+              <span class="material-symbols-outlined text-[24px]">account_tree</span>
+            </div>
+            <div>
+              <h3 class="font-headline-sm text-headline-sm text-on-surface">Organigrama Institucional NOVA PHARMA</h3>
+              <p class="font-body-sm text-body-sm text-on-surface-variant">Estructura jerárquica y funcional de investigación, producción y regulación</p>
+            </div>
+          </div>
+          <span class="px-3 py-1 rounded-full bg-surface-container-low text-primary font-label-sm text-label-sm border border-outline-variant/20 self-start">Gobernanza cGMP / ICH-GCP</span>
+        </div>
+
+        <!-- Visual Org Chart -->
+        <div class="flex flex-col items-center">
+          <!-- Level 1: Dirección General -->
+          <div class="w-full max-w-sm p-4 rounded-xl bg-primary text-on-primary text-center shadow-md">
+            <div class="font-label-sm text-[10px] uppercase tracking-wider opacity-80">Nivel Directivo</div>
+            <div class="font-headline-sm text-[17px] font-bold">Asamblea de Socios &amp; Dirección General (CEO)</div>
+          </div>
+          <!-- Connector -->
+          <div class="w-0.5 h-6 bg-outline-variant"></div>
+          <!-- Level 2: Comité de Bioética (Staff) -->
+          <div class="w-full max-w-md p-3 rounded-xl bg-secondary-fixed/50 border border-secondary-container/40 text-center">
+            <div class="font-label-sm text-[11px] font-bold text-on-secondary-fixed flex items-center justify-center gap-1.5">
+              <span class="material-symbols-outlined text-[16px]">balance</span>
+              Comité Independiente de Bioética e Integridad Científica
+            </div>
+          </div>
+          <!-- Connector -->
+          <div class="w-0.5 h-6 bg-outline-variant"></div>
+          <div class="hidden md:block w-3/4 h-0.5 bg-outline-variant"></div>
+          <!-- Level 3: 4 Direcciones -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 w-full mt-4 md:mt-0">
+            <div class="flex flex-col items-center">
+              <div class="hidden md:block w-0.5 h-5 bg-outline-variant"></div>
+              <div class="w-full p-4 rounded-xl bg-surface border border-outline-variant/40 text-center h-full">
+                <span class="material-symbols-outlined text-primary text-[22px] mb-1">biotech</span>
+                <div class="font-label-lg text-label-lg text-on-surface font-bold">Dirección de I+D y Farmacología</div>
+                <p class="font-body-sm text-[12px] text-on-surface-variant mt-1">Síntesis molecular, estudios preclínicos ADME y ensayos clínicos Fase I–III.</p>
+              </div>
+            </div>
+            <div class="flex flex-col items-center">
+              <div class="hidden md:block w-0.5 h-5 bg-outline-variant"></div>
+              <div class="w-full p-4 rounded-xl bg-surface border border-outline-variant/40 text-center h-full">
+                <span class="material-symbols-outlined text-primary text-[22px] mb-1">factory</span>
+                <div class="font-label-lg text-label-lg text-on-surface font-bold">Dirección de Producción y Galénica</div>
+                <p class="font-body-sm text-[12px] text-on-surface-variant mt-1">Formulación de formas farmacéuticas, excipientes y manufactura estéril cGMP.</p>
+              </div>
+            </div>
+            <div class="flex flex-col items-center">
+              <div class="hidden md:block w-0.5 h-5 bg-outline-variant"></div>
+              <div class="w-full p-4 rounded-xl bg-surface border border-outline-variant/40 text-center h-full">
+                <span class="material-symbols-outlined text-primary text-[22px] mb-1">gavel</span>
+                <div class="font-label-lg text-label-lg text-on-surface font-bold">Asuntos Regulatorios y Calidad</div>
+                <p class="font-body-sm text-[12px] text-on-surface-variant mt-1">Registros sanitarios (FDA/EMA/COFEPRIS), bioequivalencia y control de lotes.</p>
+              </div>
+            </div>
+            <div class="flex flex-col items-center">
+              <div class="hidden md:block w-0.5 h-5 bg-outline-variant"></div>
+              <div class="w-full p-4 rounded-xl bg-surface border border-outline-variant/40 text-center h-full">
+                <span class="material-symbols-outlined text-primary text-[22px] mb-1">shield</span>
+                <div class="font-label-lg text-label-lg text-on-surface font-bold">Farmacovigilancia y Dirección Médica</div>
+                <p class="font-body-sm text-[12px] text-on-surface-variant mt-1">Monitoreo de RAMs (Fase IV), educación médica y soporte hospitalario 24/7.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION: FORMAS FARMACÉUTICAS, VÍAS DE ADMINISTRACIÓN E IMPLICACIONES ÉTICAS Y LEGALES -->
+<section class="py-20 bg-surface-container-lowest border-t border-outline-variant/30" id="farmacologia-etica">
+  <div class="max-w-7xl mx-auto px-6 lg:px-12 space-y-12">
+    <div class="max-w-3xl">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-low border border-outline-variant/30 text-primary font-label-sm text-label-sm mb-3">
+        <span class="material-symbols-outlined text-[16px]">menu_book</span>
+        <span>Fundamentos Galénicos y Regulatorios</span>
+      </div>
+      <h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+        Formas Farmacéuticas, Vías de Administración y Marco Ético-Legal
+      </h2>
+      <p class="font-body-md text-body-md text-on-surface-variant mt-2">
+        La selección racional de la vía de administración depende directamente de las propiedades fisicoquímicas del principio activo, los excipientes de la forma farmacéutica y la urgencia clínica del paciente.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+      <!-- Formas Farmacéuticas y Componentes -->
+      <div class="lg:col-span-7 bg-surface p-8 rounded-2xl border border-outline-variant/30 space-y-6">
+        <h3 class="font-headline-sm text-headline-sm text-on-surface flex items-center gap-2">
+          <span class="material-symbols-outlined text-primary">pill</span>
+          Componentes y Diferencias entre Formas Farmacéuticas
+        </h3>
+        <p class="font-body-sm text-body-sm text-on-surface-variant">
+          Toda forma farmacéutica consta de un <strong>Principio Activo (fármaco)</strong> responsable del efecto terapéutico y <strong>Excipientes</strong> (diluyentes, aglutinantes, desintegrantes, amortiguadores de pH, vehículos estériles o saborizantes) que garantizan estabilidad, biodisponibilidad y aceptación.
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="p-4 rounded-xl bg-surface-container-lowest border border-outline-variant/30">
+            <div class="font-label-lg text-label-lg text-primary font-bold">Sólidas Orales (Comprimidos / Recubiertos)</div>
+            <p class="font-body-sm text-[12px] text-on-surface-variant mt-1.5">
+              <strong>Componentes:</strong> Fármaco + celulosa microcristalina, estearato de magnesio, recubrimiento polimérico (hipromelosa).<br/>
+              <strong>Diferencia y Vía:</strong> Vía oral. Alta estabilidad, dosificación exacta y bajo costo; sujeta a efecto de primer paso hepático y tiempo de desintegración.
+            </p>
+          </div>
+          <div class="p-4 rounded-xl bg-surface-container-lowest border border-outline-variant/30">
+            <div class="font-label-lg text-label-lg text-primary font-bold">Líquidas Orales (Suspensiones extemporáneas)</div>
+            <p class="font-body-sm text-[12px] text-on-surface-variant mt-1.5">
+              <strong>Componentes:</strong> Polvo seco + goma xantana (suspensor), buffers de pH, saborizantes.<br/>
+              <strong>Diferencia y Vía:</strong> Vía oral. Permite ajuste ponderal en pediatría y pacientes con disfagia; menor vida útil tras reconstitución.
+            </p>
+          </div>
+          <div class="p-4 rounded-xl bg-surface-container-lowest border border-outline-variant/30">
+            <div class="font-label-lg text-label-lg text-primary font-bold">Parenterales IV / IM (Soluciones estériles)</div>
+            <p class="font-body-sm text-[12px] text-on-surface-variant mt-1.5">
+              <strong>Componentes:</strong> Sal hidrosoluble + agua para inyección, NaCl isotónico, reguladores de pH.<br/>
+              <strong>Diferencia y Vía:</strong> Vía intravenosa o intramuscular. Biodisponibilidad del 100% (IV), evita primer paso hepático, ideal en urgencias o intolerancia oral.
+            </p>
+          </div>
+          <div class="p-4 rounded-xl bg-surface-container-lowest border border-outline-variant/30">
+            <div class="font-label-lg text-label-lg text-primary font-bold">Depósito Subcutáneo (Liberación Prolongada)</div>
+            <p class="font-body-sm text-[12px] text-on-surface-variant mt-1.5">
+              <strong>Componentes:</strong> Molécula lipofílica + vehículo de polietilenglicol/agua estéril.<br/>
+              <strong>Diferencia y Vía:</strong> Vía subcutánea profunda. Forma un micro-depósito de liberación lenta que mantiene concentraciones plasmáticas terapéuticas durante meses.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Implicaciones Éticas y Legales -->
+      <div class="lg:col-span-5 bg-surface p-8 rounded-2xl border border-outline-variant/30 space-y-5">
+        <h3 class="font-headline-sm text-headline-sm text-on-surface flex items-center gap-2">
+          <span class="material-symbols-outlined text-primary">balance</span>
+          Implicaciones Éticas y Legales
+        </h3>
+        <div class="space-y-4">
+          <div class="p-4 rounded-xl bg-surface-container-lowest border border-outline-variant/30">
+            <div class="font-label-lg text-label-lg text-on-surface font-semibold flex items-center gap-2">
+              <span class="material-symbols-outlined text-primary text-[18px]">fact_check</span>
+              1. Ensayos Clínicos y Consentimiento Informado
+            </div>
+            <p class="font-body-sm text-[12px] text-on-surface-variant mt-1">
+              Cumplimiento estricto de la Declaración de Helsinki y guías ICH-GCP: autonomía del paciente, evaluación riesgo-beneficio por comités de bioética y transparencia en resultados.
+            </p>
+          </div>
+          <div class="p-4 rounded-xl bg-surface-container-lowest border border-outline-variant/30">
+            <div class="font-label-lg text-label-lg text-on-surface font-semibold flex items-center gap-2">
+              <span class="material-symbols-outlined text-primary text-[18px]">policy</span>
+              2. Marco Regulatorio y Prescripción Legal
+            </div>
+            <p class="font-body-sm text-[12px] text-on-surface-variant mt-1">
+              Comercialización sujeta a registro sanitario (FDA, EMA, autoridades nacionales), buenas prácticas de manufactura (cGMP) y dispensación bajo receta médica para prevenir automedicación y resistencia antimicrobiana.
+            </p>
+          </div>
+          <div class="p-4 rounded-xl bg-surface-container-lowest border border-outline-variant/30">
+            <div class="font-label-lg text-label-lg text-on-surface font-semibold flex items-center gap-2">
+              <span class="material-symbols-outlined text-primary text-[18px]">report</span>
+              3. Farmacovigilancia y Acceso Equitativo
+            </div>
+            <p class="font-body-sm text-[12px] text-on-surface-variant mt-1">
+              Obligación legal de reportar reacciones adversas (Fase IV), trazabilidad anti-falsificación y equilibrio ético entre propiedad intelectual (patentes) y acceso a medicamentos esenciales.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION: I+D Y CIENCIA -->
+<section class="py-20 bg-surface border-t border-outline-variant/30" id="ciencia">
+  <div class="max-w-7xl mx-auto px-6 lg:px-12">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <div class="lg:col-span-5">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-low border border-outline-variant/30 text-primary font-label-sm text-label-sm mb-3">
+          <span class="material-symbols-outlined text-[16px]">hub</span>
+          <span>Pipeline Bioquímico</span>
+        </div>
+        <h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+          Investigación Traslacional y Ensayos Multicéntricos
+        </h2>
+        <p class="font-body-md text-body-md text-on-surface-variant mt-4">
+          Conectamos los descubrimientos moleculares con la aplicación clínica directa, garantizando márgenes terapéuticos amplios y perfiles farmacocinéticos predecibles.
+        </p>
+        <div class="mt-8 space-y-4">
+          <div class="flex items-start gap-3">
+            <span class="material-symbols-outlined text-primary mt-1 text-[20px]">check_circle</span>
+            <div>
+              <div class="font-label-lg text-label-lg text-on-surface">Modelado Farmacocinético ADME</div>
+              <div class="font-body-sm text-body-sm text-on-surface-variant">Caracterización precisa de biodisponibilidad, volumen de distribución y rutas metabólicas Fase I/II.</div>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="material-symbols-outlined text-primary mt-1 text-[20px]">check_circle</span>
+            <div>
+              <div class="font-label-lg text-label-lg text-on-surface">Formulaciones de Liberación Programada</div>
+              <div class="font-body-sm text-body-sm text-on-surface-variant">Optimización de la adherencia posológica y minimización de efectos adversos.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="lg:col-span-7 bg-surface-container-lowest p-8 rounded-2xl border border-outline-variant/30 clinical-card-shadow">
+        <h3 class="font-headline-sm text-headline-sm text-on-surface mb-6 flex items-center justify-between">
+          <span>Fases del Pipeline de Moléculas</span>
+          <span class="font-label-sm text-label-sm px-2.5 py-1 rounded bg-surface border border-outline-variant/30 text-outline">En tiempo real</span>
+        </h3>
+        <div class="space-y-6">
+          <div class="flex items-start gap-4">
+            <div class="flex flex-col items-center">
+              <div class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-sm text-label-sm font-bold">1</div>
+              <div class="w-0.5 h-12 bg-primary"></div>
+            </div>
+            <div class="pb-2">
+              <div class="flex items-center gap-2">
+                <h4 class="font-label-lg text-label-lg text-on-surface font-bold">Fase Preclínica / In Vitro</h4>
+                <span class="px-2 py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm">48 Candidatos</span>
+              </div>
+              <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Estudios de toxicología aguda, farmacocinética y farmacodinamia computacional.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <div class="flex flex-col items-center">
+              <div class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-sm text-label-sm font-bold">2</div>
+              <div class="w-0.5 h-12 bg-primary"></div>
+            </div>
+            <div class="pb-2">
+              <div class="flex items-center gap-2">
+                <h4 class="font-label-lg text-label-lg text-on-surface font-bold">Fase I (Seguridad Humana)</h4>
+                <span class="px-2 py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm">14 Ensayos</span>
+              </div>
+              <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Determinación de rangos posológicos seguros y farmacocinética en voluntarios sanos.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <div class="flex flex-col items-center">
+              <div class="w-8 h-8 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-label-sm text-label-sm font-bold animate-pulse">3</div>
+              <div class="w-0.5 h-12 bg-outline-variant/40"></div>
+            </div>
+            <div class="pb-2">
+              <div class="flex items-center gap-2">
+                <h4 class="font-label-lg text-label-lg text-on-surface font-bold">Fases II y III (Eficacia y Multicéntrico)</h4>
+                <span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">8 Ensayos Activos</span>
+              </div>
+              <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Validación aleatorizada doble ciego frente a tratamientos de referencia.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <div class="flex flex-col items-center">
+              <div class="w-8 h-8 rounded-full bg-surface-container-high text-primary flex items-center justify-center font-label-sm text-label-sm font-bold">4</div>
+            </div>
+            <div>
+              <div class="flex items-center gap-2">
+                <h4 class="font-label-lg text-label-lg text-on-surface font-bold">Registro y Farmacovigilancia (Fase IV)</h4>
+                <span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm">4 Productos Activos</span>
+              </div>
+              <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Dossiers regulatorios eCTD aprobados y vigilancia post-comercialización continua.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- FOOTER -->
+<footer class="w-full bg-surface-container-low border-t border-outline-variant/30">
+  <div class="max-w-7xl mx-auto px-6 lg:px-12 py-12 flex flex-col gap-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 pb-8 border-b border-outline-variant/20">
+      <div class="lg:col-span-4 flex flex-col gap-4">
+        <a class="flex items-center gap-2" href="#inicio">
+          <img alt="NOVA PHARMA Logo" class="h-9 w-auto object-contain" src="assets/logo.png"/>
+          <span class="font-headline-sm font-bold text-primary">NOVA PHARMA</span>
+        </a>
+        <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+          Laboratorio biofarmacéutico enfocado en el desarrollo de medicamentos de síntesis química avanzada y terapias de última generación.
+        </p>
+        <div class="flex items-center gap-3 text-primary text-label-sm font-label-sm mt-1">
+          <span class="material-symbols-outlined text-[18px]">verified</span>
+          <span>Estándares ICH-GCP y cGMP certificados</span>
+        </div>
+      </div>
+      <div class="lg:col-span-2">
+        <div class="font-label-lg text-label-lg text-on-surface font-semibold mb-3">Portafolio</div>
+        <ul class="space-y-2 font-body-sm text-body-sm text-on-surface-variant">
+          <li><a class="hover:text-primary transition-colors" href="cardio-care.html">Telmisartán (Cardio-Care®)</a></li>
+          <li><a class="hover:text-primary transition-colors" href="novacilin.html">Amoxicilina/Clav (NovaCilin®)</a></li>
+          <li><a class="hover:text-primary transition-colors" href="dolor-off.html">Dexketoprofeno (Dolor-Off®)</a></li>
+          <li><a class="hover:text-primary transition-colors" href="leni-bio.html">Lenacapavir (Leni-Bio®)</a></li>
+        </ul>
+      </div>
+      <div class="lg:col-span-3">
+        <div class="font-label-lg text-label-lg text-on-surface font-semibold mb-3">Investigación &amp; Empresa</div>
+        <ul class="space-y-2 font-body-sm text-body-sm text-on-surface-variant">
+          <li><a class="hover:text-primary transition-colors" href="#nosotros">Misión, Visión y Organigrama</a></li>
+          <li><a class="hover:text-primary transition-colors" href="#farmacologia-etica">Formas Farmacéuticas y Vías</a></li>
+          <li><a class="hover:text-primary transition-colors" href="#ciencia">Pipeline Terapéutico</a></li>
+        </ul>
+      </div>
+      <div class="lg:col-span-3">
+        <div class="font-label-lg text-label-lg text-on-surface font-semibold mb-3">Marco Legal &amp; Seguridad</div>
+        <ul class="space-y-2 font-body-sm text-body-sm text-on-surface-variant">
+          <li><a class="text-primary font-medium hover:underline flex items-center gap-1" href="#farmacologia-etica"><span class="material-symbols-outlined text-[16px]">report</span> Farmacovigilancia 24/7</a></li>
+          <li><a class="hover:text-primary transition-colors" href="#farmacologia-etica">Ética y Cumplimiento (ICH-GCP)</a></li>
+          <li><button onclick="openModal('modal-coa')" class="hover:text-primary transition-colors text-left">Certificados de Análisis (CoA)</button></li>
+        </ul>
+      </div>
+    </div>
+    <div class="p-4 rounded-xl bg-surface-container-lowest border border-outline-variant/30 text-on-surface-variant font-body-sm text-body-sm flex items-start gap-3">
+      <span class="material-symbols-outlined text-outline text-[20px] mt-0.5 shrink-0">info</span>
+      <div>
+        <span class="font-bold text-on-surface">Información Regulatoria Obligatoria:</span> Información dirigida exclusivamente a profesionales de la salud y con fines educativos y académicos. La prescripción de medicamentos debe ser realizada por un médico colegiado legalmente facultado.
+      </div>
+    </div>
+    <div class="flex flex-col sm:flex-row items-center justify-between gap-4 font-body-sm text-body-sm text-outline">
+      <div>© 2025–2026 NOVA PHARMA S.A. Todos los derechos reservados.</div>
+      <div>Portal Científico v4.3-ES</div>
+    </div>
+  </div>
+</footer>
+
+<!-- MODAL: CERTIFICADOS COA -->
+<div id="modal-coa" class="fixed inset-0 z-50 hidden items-center justify-center bg-on-surface/50 backdrop-blur-xs p-4">
+  <div class="bg-surface-container-lowest rounded-2xl max-w-lg w-full p-6 border border-outline-variant/40 shadow-2xl space-y-4">
+    <div class="flex items-center justify-between border-b border-outline-variant/20 pb-3">
+      <h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Certificados de Análisis (CoA) y Bioequivalencia</h3>
+      <button onclick="closeModal('modal-coa')" class="text-outline hover:text-on-surface"><span class="material-symbols-outlined">close</span></button>
+    </div>
+    <div class="space-y-2.5 font-body-sm text-body-sm">
+      <div class="p-3 rounded-lg bg-surface border border-outline-variant/30 flex justify-between items-center">
+        <div><strong class="text-on-surface">Cardio-Care® (Telmisartán)</strong><div class="text-xs text-outline font-mono">Lote: CC-2026-04A | Pureza: 99.2%</div></div>
+        <span class="px-2 py-1 rounded bg-secondary-fixed text-on-secondary-fixed text-xs font-semibold">cGMP OK</span>
+      </div>
+      <div class="p-3 rounded-lg bg-surface border border-outline-variant/30 flex justify-between items-center">
+        <div><strong class="text-on-surface">NovaCilin® (Amoxicilina + Clavulánico)</strong><div class="text-xs text-outline font-mono">Lote: NC-2026-11B | Pureza: 98.9%</div></div>
+        <span class="px-2 py-1 rounded bg-secondary-fixed text-on-secondary-fixed text-xs font-semibold">cGMP OK</span>
+      </div>
+      <div class="p-3 rounded-lg bg-surface border border-outline-variant/30 flex justify-between items-center">
+        <div><strong class="text-on-surface">Dolor-Off® (Dexketoprofeno)</strong><div class="text-xs text-outline font-mono">Lote: DO-2026-08C | Pureza: 99.5%</div></div>
+        <span class="px-2 py-1 rounded bg-secondary-fixed text-on-secondary-fixed text-xs font-semibold">cGMP OK</span>
+      </div>
+      <div class="p-3 rounded-lg bg-surface border border-outline-variant/30 flex justify-between items-center">
+        <div><strong class="text-on-surface">Leni-Bio® (Lenacapavir)</strong><div class="text-xs text-outline font-mono">Lote: LB-2026-02X | Pureza: 99.6%</div></div>
+        <span class="px-2 py-1 rounded bg-secondary-fixed text-on-secondary-fixed text-xs font-semibold">FDA / EMA</span>
+      </div>
+    </div>
+    <div class="pt-2 text-right">
+      <button onclick="closeModal('modal-coa')" class="px-4 py-2 rounded-lg bg-primary text-on-primary font-label-md font-semibold">Cerrar</button>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL: PORTAL MEDICO -->
+<div id="modal-login" class="fixed inset-0 z-50 hidden items-center justify-center bg-on-surface/50 backdrop-blur-xs p-4">
+  <div class="bg-surface-container-lowest rounded-2xl max-w-md w-full p-6 border border-outline-variant/40 shadow-2xl space-y-4">
+    <div class="flex items-center justify-between border-b border-outline-variant/20 pb-3">
+      <h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Acceso para Profesionales de la Salud</h3>
+      <button onclick="closeModal('modal-login')" class="text-outline hover:text-on-surface"><span class="material-symbols-outlined">close</span></button>
+    </div>
+    <p class="font-body-sm text-body-sm text-on-surface-variant">Ingrese su cédula profesional o matrícula médica para acceder a reportes de farmacovigilancia y monografías ampliadas.</p>
+    <form onsubmit="event.preventDefault(); closeModal('modal-login');" class="space-y-3">
+      <div>
+        <label class="block font-label-md text-on-surface mb-1">Cédula / Registro Médico</label>
+        <input type="text" placeholder="Ej. MED-104829" class="w-full rounded-lg border-outline-variant text-sm focus:border-primary focus:ring-primary" required/>
+      </div>
+      <div>
+        <label class="block font-label-md text-on-surface mb-1">Clave de acceso</label>
+        <input type="password" placeholder="••••••••" class="w-full rounded-lg border-outline-variant text-sm focus:border-primary focus:ring-primary" required/>
+      </div>
+      <button type="submit" class="w-full py-2.5 rounded-lg bg-primary text-on-primary font-label-lg font-semibold hover:bg-primary-container transition-colors">Validar Credenciales</button>
+    </form>
+  </div>
+</div>
+
+<script>
+  function openModal(id) {
+    const el = document.getElementById(id);
+    if (el) { el.classList.remove('hidden'); el.classList.add('flex'); }
+  }
+  function closeModal(id) {
+    const el = document.getElementById(id);
+    if (el) { el.classList.add('hidden'); el.classList.remove('flex'); }
+  }
+</script>
+</body>
+</html>
